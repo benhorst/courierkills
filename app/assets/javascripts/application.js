@@ -14,4 +14,6 @@
 //= require angular-resource
 //= require angular-material
 //= require angular-ui-router
+//= require angular-animate
+//= require angular-aria
 //= require_tree .

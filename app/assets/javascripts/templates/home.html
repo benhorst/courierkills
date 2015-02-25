@@ -1,11 +1,15 @@
-<h3>Hours Since the Courier Was Killed</h3>
+<md-content layout="column" layout-fill style="width: 80%; margin: 0 auto; font-size: 2em;">
+  <section layout="column" style="font-size: 3em;">
+    <md-whiteframe class="md-whiteframe-z3" layout="column" layout-align="center center">
+          <span>Hours Since the Courier Was Killed</span>
+      <div>{{kill.created_at | hoursSince}}</div>
 
-<div>{{kill.created_at | hoursSince}}</div>
-
-<div>And it was mostly {{kill.killer}}'s fault</div>
-
-<button ng-click="showreport = !showreport">Report Kill</button>
-<div ng-if="showreport">
-  Tell us who did it (or else we assume it was Jacob)<input type=text ng-model="main.killerInput" />
-  <button ng-click="reportKill()">Got It Killed Again</button>
-</div>
+      <div>(And it was mostly {{kill.killer}}'s fault)</div>
+    </md-whiteframe>
+  </section>
+<br><br><br><br><br>
+  <div>
+    Tell us who did it (or else we assume it was Jacob)<input type=text ng-model="main.killerInput" />
+    <md-button class="md-raised md-primary" ng-click="reportKill()">Report Fresh Kill</md-button>
+  </div>
+</md-content>

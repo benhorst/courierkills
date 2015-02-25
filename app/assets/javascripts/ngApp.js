@@ -1,4 +1,4 @@
-angular.module('courierkill.app', ['ui.router', 'ngResource'])
+angular.module('courierkill.app', ['ui.router', 'ngResource', 'ngMaterial'])
 
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateP, $urlRouterP, $lP) {
   $lP.html5Mode({enabled: true, requireBase: false });
