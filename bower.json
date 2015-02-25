@@ -1,0 +1,12 @@
+{
+  "name": "courierkiller",
+  "dependencies": {
+    "angular": "1.4",
+    "angular-resource": "",
+    "angular-ui-router": "",
+    "angular-material": ""
+  },
+  "resolutions": {
+    "angular": "1.4"
+  }
+}

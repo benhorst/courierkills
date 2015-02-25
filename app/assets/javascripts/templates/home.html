@@ -1,0 +1,11 @@
+<h3>Hours Since the Courier Was Killed</h3>
+
+<div>{{kill.created_at | hoursSince}}</div>
+
+<div>And it was mostly {{kill.killer}}'s fault</div>
+
+<button ng-click="showreport = !showreport">Report Kill</button>
+<div ng-if="showreport">
+  Tell us who did it (or else we assume it was Jacob)<input type=text ng-model="main.killerInput" />
+  <button ng-click="reportKill()">Got It Killed Again</button>
+</div>
