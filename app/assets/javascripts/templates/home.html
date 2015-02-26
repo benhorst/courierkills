@@ -1,15 +1,16 @@
 <md-content layout="column" layout-fill style="width: 80%; margin: 0 auto; font-size: 2em;">
-  <section layout="column" style="font-size: 3em;">
-    <md-whiteframe class="md-whiteframe-z3" layout="column" layout-align="center center">
-          <span>Hours Since the Courier Was Killed</span>
-      <div>{{kill.created_at | hoursSince:Date.now()}}</div>
-
-      <div>(And it was mostly {{kill.killer}}'s fault)</div>
+  <section layout="column" style="font-size: 1.5em;">
+    <md-toolbar style="font-size: 2em; text-align:center">Hours Since the Courier Was Killed</md-toolbar>
+    <md-whiteframe class="md-whiteframe-z1" layout="column" layout-align="center center" style="margin-bottom: 15px">
+      <div style="font-size: 3em;">{{kill.created_at | hoursSince:Date.now()}}</div>
     </md-whiteframe>
+    <div layout="column" layout-align="center center" style="background-color:transparent">
+      <md-subheader class="md-primary">(And it was mostly {{kill.killer}}'s fault)</md-subheader>
+    </div>
   </section>
-<br><br><br><br><br>
-  <div>
-    Tell us who did it (or else we assume it was Jacob)<input type=text ng-model="main.killerInput" />
+<br><br><br>
+  <div layout="row" layout-align="center center">
+    Tell us who did it (or else we assume it was Jacob) <input type=text ng-model="main.killerInput" />
     <md-button class="md-raised md-primary" ng-click="reportKill()">Report Fresh Kill</md-button>
   </div>
 </md-content>
