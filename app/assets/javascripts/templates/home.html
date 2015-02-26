@@ -2,7 +2,7 @@
   <section layout="column" style="font-size: 3em;">
     <md-whiteframe class="md-whiteframe-z3" layout="column" layout-align="center center">
           <span>Hours Since the Courier Was Killed</span>
-      <div>{{kill.created_at | hoursSince}}</div>
+      <div>{{kill.created_at | hoursSince:Date.now()}}</div>
 
       <div>(And it was mostly {{kill.killer}}'s fault)</div>
     </md-whiteframe>

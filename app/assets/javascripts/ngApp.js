@@ -12,12 +12,15 @@ angular.module('courierkill.app', ['ui.router', 'ngResource', 'ngMaterial'])
   });
 }])
 
-.controller('MainController', ['$scope', '$resource', '$timeout', function($s, $resource, $timeout) {
+.controller('MainController', ['$scope', '$resource', '$timeout', '$window', function($s, $resource, $timeout, $w) {
   var self = this;
+  $s.Date = $w.Date;
   var killRes = $resource('/courierkill/last');
 
   function load() {
-    $s.kill = killRes.get();
+    $s.loadingkill = killRes.get(function() {
+      $s.kill = $s.loadingkill;
+    });
   }
 
   function continuousLoad() {
@@ -38,8 +41,8 @@ angular.module('courierkill.app', ['ui.router', 'ngResource', 'ngMaterial'])
   }
 }])
 .filter('hoursSince', function() {
-  return function(timeString) {
+  return function(timeString, diff) {
      var lastTime = new Date(timeString);
-     return (( (Date.now()) - lastTime) / 1000 / 60 / 60).toPrecision(1);
+     return (( diff - lastTime) / 1000 / 60 / 60).toFixed(2);
   };
 });
