@@ -4,7 +4,8 @@
     "angular": "1.4",
     "angular-resource": "",
     "angular-ui-router": "",
-    "angular-material": ""
+    "angular-material": "",
+    "d3": ""
   },
   "resolutions": {
     "angular": "1.4"

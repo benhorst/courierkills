@@ -16,4 +16,5 @@
 //= require angular-ui-router
 //= require angular-animate
 //= require angular-aria
+//= require d3
 //= require_tree .

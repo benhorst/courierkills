@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'index#index'
+  get '/', to: redirect('/a')
+  get '/a' => 'index#index'
+  get '/a/*all' => 'index#index'
   get '/reset' => 'index#reset'
   get '/courierkill/last' => 'courierkill#last'
   resources :courierkill

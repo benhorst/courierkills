@@ -1,0 +1,23 @@
+<md-content layout="column" layout-fill style="width: 80%; margin: 0 auto; font-size: 2em;">
+  <section layout="column" style="font-size: 1.5em;">
+    <md-toolbar style="font-size: 2em; text-align:center">The Plot of Shame</md-toolbar>
+    <md-subheader><a ui-sref="home">Home</a></md-subheader>
+  </section>
+
+  <style>
+    .domain { 
+      fill: none; 
+      stroke: black; 
+      stroke-width: 1; 
+    }
+    .grid .tick line {
+      stroke-width: 1;
+      stroke: black;
+      opacity: 0.3;
+    }
+</style>
+
+  <div id="scatter" class="grid">
+
+  </div>
+</md-content>

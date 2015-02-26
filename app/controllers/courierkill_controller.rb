@@ -12,7 +12,7 @@ class CourierkillController < ApplicationController
   end
 
   def last
-    @kill = Courierkill.last
+    @kill = Courierkill.all.sort_by(&:created_at).last
     
     render :json => @kill
   end
