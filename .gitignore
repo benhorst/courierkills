@@ -17,3 +17,6 @@
 
 # compiled assets
 /public/assets/*
+
+#config files that should not be checked into source control
+/config/puma.rb
